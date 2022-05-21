@@ -1,8 +1,8 @@
 {
-  "name": "crx-miyaoka-template",
+  "name": "crx-twitter-gif-control",
   "private": true,
   "version": "1.0.0",
-  "description": "description here.",
+  "description": "add player control to gif",
   "author": "Masaya Kazama <miyan@t-p.jp>",
   "license": "MIT",
   "scripts": {

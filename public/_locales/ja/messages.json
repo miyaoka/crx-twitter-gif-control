@@ -1,8 +1,8 @@
 {
   "extName": {
-    "message": "タイトル"
+    "message": "Twitter gif control"
   },
   "extDescription": {
-    "message": "概要"
+    "message": "Twitterのgif動画に再生コントロールを追加します"
   }
 }
