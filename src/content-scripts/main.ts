@@ -3,12 +3,19 @@ const addVideoControl = () => {
     .querySelectorAll('[data-testid="videoPlayer"]')
     .forEach((videoPlayer) => {
       const video = videoPlayer.querySelector("video");
-      const control = videoPlayer.querySelector<HTMLElement>('[tabindex="0"]');
-      video?.setAttribute("controls", "");
+      if (!video) return;
 
-      if (control) {
-        control.style.pointerEvents = "none";
-      }
+      // not gif
+      if (/^blob/.test(video.src)) return;
+
+      video.setAttribute("controls", "");
+
+      // disable video front layer
+      const videoFrontArea =
+        videoPlayer.querySelector<HTMLElement>('[tabindex="0"]');
+
+      if (!videoFrontArea) return;
+      videoFrontArea.style.pointerEvents = "none";
     });
 };
 
